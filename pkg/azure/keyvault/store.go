@@ -40,7 +40,7 @@ func NewStore(cfg azureconfig.Config, l hclog.Logger) *Store {
 	return &Store{
 		config:    cfg,
 		logger:    l,
-		vaultUrl:  fmt.Sprintf("https://%s.vault.azure.net", cfg.Vault),
+		vaultUrl:  fmt.Sprintf(cfg.Vault),
 		hostStore: host.NewStore(),
 	}
 }
